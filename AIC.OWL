@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ashra/ontologies/2024/10/untitled-ontology-11"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/ashra/ontologies/2024/10/untitled-ontology-11">
+    <Prefix name="" IRI="http://www.semanticweb.org/ashra/ontologies/2024/10/untitled-ontology-11/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Circle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Formula"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rectangle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shape"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Square"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Triangle"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFormula"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#areaFormula"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numberOfSides"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#perimeterFormula"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Base"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Height"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Length"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rectangle_A"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Triangle_A"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Width"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Circle"/>
+        <Class IRI="#Shape"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rectangle"/>
+        <Class IRI="#Shape"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Square"/>
+        <Class IRI="#Shape"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Triangle"/>
+        <Class IRI="#Shape"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Property"/>
+        <NamedIndividual IRI="#Base"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Property"/>
+        <NamedIndividual IRI="#Height"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Property"/>
+        <NamedIndividual IRI="#Length"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Rectangle"/>
+        <NamedIndividual IRI="#Rectangle_A"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Triangle"/>
+        <NamedIndividual IRI="#Triangle_A"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Property"/>
+        <NamedIndividual IRI="#Width"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasProperty"/>
+        <NamedIndividual IRI="#Rectangle_A"/>
+        <NamedIndividual IRI="#Length"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasProperty"/>
+        <NamedIndividual IRI="#Rectangle_A"/>
+        <NamedIndividual IRI="#Width"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasProperty"/>
+        <NamedIndividual IRI="#Triangle_A"/>
+        <NamedIndividual IRI="#Height"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasProperty"/>
+        <NamedIndividual IRI="#Triangle_A"/>
+        <NamedIndividual IRI="#Length"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numberOfSides"/>
+        <NamedIndividual IRI="#Rectangle_A"/>
+        <Literal>Length × Width</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numberOfSides"/>
+        <NamedIndividual IRI="#Rectangle_A"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#areaFormula"/>
+        <NamedIndividual IRI="#Triangle_A"/>
+        <Literal>(Base × Height) ÷ 2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numberOfSides"/>
+        <NamedIndividual IRI="#Triangle_A"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">3</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFormula"/>
+        <Class IRI="#Shape"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasProperty"/>
+        <Class IRI="#Shape"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFormula"/>
+        <Class IRI="#Formula"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasProperty"/>
+        <Class IRI="#Property"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#areaFormula"/>
+        <Class IRI="#Shape"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numberOfSides"/>
+        <Class IRI="#Shape"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#perimeterFormula"/>
+        <Class IRI="#Shape"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#areaFormula"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#numberOfSides"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#perimeterFormula"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
